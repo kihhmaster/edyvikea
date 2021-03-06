@@ -1,0 +1,533 @@
+@import "vars"
+
+
+/*==========  Desktop First  ==========*/
+
+// ≥1200px
++media-breakpoint-down(lg)
+	.top-slider
+		.top-slider_desktop-xl
+			display: none
+	.top-slider
+		.top-slider_desktop
+			display: block
+
+	.top-menu_wrap
+		margin-top: $gutter/2
+		margin-bottom: $gutter/2
+	.text-Slider_wrap
+		top: 100px
+		.description_top-slider
+			line-height: 1.8	
+		h1
+			font-size: 42px
+			margin-bottom: $gutter/2
+	.text-slider_button
+		margin-top: $gutter/4
+		padding: 5px 35px
+	h2
+		font-size: 42px
+	.line
+		right: -620px
+	.container-fluid
+		padding-left: $gutter
+		padding-right: $gutter
+	.motivation
+		background-image: none
+		height: 1100px
+	.item	
+		width: 100%
+		max-width: 250px
+		background: #ebebeb
+		margin: $gutter/3
+		padding: $gutter/3
+		font-size: 18px
+		color: $accent
+		font-weight: 700
+		line-height: 1.4
+	.row_price_2, .row_price_3, .row_price_4
+		.item
+			color: $text
+			p
+				font-size: 16px
+				font-weight: 500
+				text-align: center
+				margin-bottom: 0
+				span
+					font-size: 18px
+					font-weight: 800
+	.line_2
+		position: relative
+		right: -480px
+		top: -25px
+		width: 1400px
+// ≥992px
++media-breakpoint-down(md)
+	.product-slider_2
+		margin-top: $gutter*3
+	.line_2
+		position: relative
+		right: -400px
+		top: -20px
+		width: 1000px
+	.title-reviews_item_2
+		margin-top: 50px
+	.motivation
+		height: 850px
+	.line
+		right: -500px
+		top: 45px
+
+	.top-menu_wrap
+		margin-top: $gutter/2
+		margin-bottom: $gutter/2
+	.text-Slider_wrap
+		top: 105px	
+		h1
+			font-size: 38px
+			margin-bottom: $gutter/3
+			line-height: 1.0
+		.description_top-slider
+			font-size: 16px
+			line-height: 1.6
+	.button
+		padding: 5px 45px
+	.text-slider_button
+		margin-top: $gutter/3
+		font-size: 16px
+		padding: 4px 45px
+	.owl-theme .owl-nav.disabled+.owl-dots
+		margin-top: -25px
+	h2
+		font-size: 36px
+	.block_motivation
+		margin-top: $gutter
+	.block-motivation_item
+		margin-right: $gutter/2
+		width: 100%
+		max-width: 300px
+		img
+			width: 50px
+			margin-bottom: $gutter/2
+			margin-top: $gutter/2
+		p
+			font-size: 16px
+			line-height: 1.5
+			span
+				font-size: 20px
+	.wrap_order
+		margin-top: $gutter*2
+	.block_order
+		margin-top: $gutter
+		display: inline-flex
+		p
+			font-size: 16px
+			span
+				color: $accent
+				font-weight: 800
+		img
+			width: 80px
+			margin-bottom: $gutter/2
+		div
+			margin-right: $gutter/2
+	.block-order_item_1
+		.motivation_button
+			display: none
+	.block-order_item_3
+		.motivation_button
+			display: none
+		img
+			width: 60px
+	.block_order
+		display: flex
+		justify-content: space-between
+	.block_motivation
+		display: flex
+		justify-content: space-between
+	.wrap_footer
+		display: flex
+		flex-direction: column-reverse
+// ≥768px
++media-breakpoint-down(sm)
+
+	#showcase 
+		height: 340px
+		.card 
+			img 
+				width: 160px
+	.title-reviews_item_1
+		padding-left: $gutter/2
+		padding-right: $gutter/2
+	.line_2
+		position: relative
+		right: -320px
+		top: -16px
+		width: 900px
+	.price 
+		h2
+			text-align: center
+			margin-top: $gutter
+			margin-bottom: $gutter*2
+			padding-top: $gutter/2
+	.motivation
+		height: 100%
+	.wrap_mobile_price
+		display: block
+	.wrap_price 
+		display: none
+	.top-slider
+		.top-slider_desktop, .top-slider_mobile
+			display: none
+	.top-slider
+		.top-slider_tablet
+			display: block
+					
+	.city
+		font-size: 16px
+		select
+			font-size: 16px
+	.logo
+		img
+			width: 140px
+	.top-menu_wrap
+		margin-top: $gutter/3
+		margin-bottom: $gutter/3
+	.text-Slider_wrap
+		top: 100px	
+		h1
+			font-size: 34px
+			margin-bottom: $gutter/4
+			line-height: 1.0
+		.description_top-slider
+			font-size: 18px
+			line-height: 1.4
+	.button
+		padding: 8px 38px
+		font-size: 16px
+	.text-slider_button
+		margin-top: $gutter/3
+	.owl-theme .owl-nav.disabled+.owl-dots
+		margin-top: -25px
+	h2
+		font-size: 28px
+	.container-fluid
+		padding-left: $gutter/2
+		padding-right: $gutter/2
+	.motivation
+		margin-top: $gutter
+	.block_motivation
+		margin-top: $gutter/2
+		flex-direction: column
+		align-items: center
+	.block_motivation_desktop
+		display: none
+	.title_motivation
+		padding-left: $gutter/3
+		padding-right: $gutter/3
+
+	.wrap_motivation
+		margin-top: $gutter*2
+		.block_motivation_mobile
+			display: flex
+			justify-content: start
+			align-items: start
+			padding-left: $gutter/3
+			padding-right: $gutter/3
+	.motivation-item_title
+		display: flex
+		flex-flow: row nowrap 
+	.block-motivation_item
+		width: 100%
+		max-width: 600px
+		margin-right: 0
+		img
+			width: 40px
+			margin: 5px 15px 5px 0px
+		p
+			font-size: 14px
+			line-height: 1.5
+			margin-bottom: $gutter/3
+			padding-top: 15px
+			span
+				
+				font-size: 18px
+	.line
+		right: -400px
+		top: 40px
+	
+	.wrap_order
+		margin-top: $gutter*2
+	.block_order
+		margin-top: $gutter
+		display: flex
+		flex-direction: column
+		align-items: start
+		width: 100%
+		max-width: 500px
+		p
+			font-size: 16px
+			span
+				color: $accent
+				font-weight: 800
+		img
+			width: 60px
+			margin-bottom: $gutter/2
+			margin-right: $gutter/3
+		div
+			margin-right: $gutter/2
+	.block-order_item_1, .block-order_item_2, .block-order_item_3
+		display: inline-flex
+		justify-content: center
+		text-align: left
+	.motivation_button
+		padding: 10px 45px
+	.wrap_order
+		text-align: center
+		.block-order_mobile
+			display: flex
+	.line_order	
+		text-align: center
+		border-top: 3px solid $accent2
+		margin: 5px
+		padding: $gutter $gutter/3 $gutter/3 $gutter/3
+	.title_order
+		display: none
+	.wrap_block-order_mobile
+		display: flex
+		flex-direction: column
+		align-items: center
+		margin-top: $gutter
+	.wrap_order
+		margin-top: $gutter*2
+		.block-order_desktop
+			display: none
+	.wrap_block-order_mobile
+		p
+			font-size: 16px
+			
+		.motivation_button
+			margin-top: $gutter/4
+			padding: 8px 35px
+	.menu
+		line-height: 1.3
+// ≥576px
++media-breakpoint-down(xs)
+	.top-menu
+		.contacts_desktop
+			display: none
+	.contacts_mobile
+		display: block
+	#showcase 
+		height: 320px
+		.card 
+			img 
+				width: 170px
+				margin: 0
+	.wrap_info-fotter
+		 p 
+			 line-height: 1.2
+			 font-size: 18px
+	.wrap_info-fotter
+		margin: 0 $gutter
+		.list-cities
+			p 
+				line-height: 1.6
+				font-size: 14px
+
+	.title-reviews_item_1
+		width: 100%
+		padding-left: $gutter
+		padding-right: $gutter
+		h2
+			font-size: 24px
+			padding-top: $gutter
+			border-top: 3px solid $accent2
+			text-align: center
+			f
+	#showcase
+		margin-top: $gutter
+
+	.line_2
+		display: none
+	.price 
+		margin-top: $gutter
+		h2
+
+			text-align: center
+			margin-top: 0
+			margin-bottom: $gutter*1.5
+	.container-fluid
+		padding-left: 10px
+		padding-right: 10px
+	.top-slider
+		.top-slider_desktop, .top-slider_tablet
+			display: none
+	
+	
+	.city
+		font-size: 14px
+		select
+			font-size: 14px
+	.logo
+		img
+			width: 80px
+	.top-menu_wrap
+		margin-top: $gutter/3
+		margin-bottom: $gutter/3
+
+	.wrap_top-slider_mobile
+		display: flex
+		flex-direction: column
+	.text-Slider_wrap 
+		.description_top-slider 
+			margin-top: $gutter/5
+			text-align: center
+			p 
+				line-height: 1.2
+				span
+					margin-left: 0
+	.top-slider
+		.top-slider_mobile
+			display: block
+			margin-top: $gutter
+
+	.text-Slider_wrap
+		width: 100%
+		margin-left: auto
+		margin-right: auto
+		background-color: #f2f2f2
+		border-radius: 10px
+		top: $gutter
+		position: relative
+		padding-top: $gutter/2
+		padding-bottom: $gutter/2
+		h1
+			font-family: $default-font
+			font-size: 26px
+			text-align: center
+			font-weight: 800
+			color: $accent
+			line-height: 1
+			margin-bottom: $gutter/4
+		.description_top-slider
+			display: flex
+			flex-direction: column
+			font-family: $default-font
+			font-size: 16px
+			font-weight: 600
+			color: $accent
+			line-height: 2.0
+			margin: 0
+			p
+				margin: 0
+				span
+					margin-left: auto
+					color: $text 
+	.button
+		padding: 3px 28px
+		font-size: 16px
+	.text-slider_button
+		margin-top: $gutter/3
+	.owl-theme .owl-nav.disabled+.owl-dots
+		margin-top: -25px
+	
+	.text-slider_button
+		position: absolute
+	.text-Slider_wrap
+		.description_top-slider
+			display: flex
+			flex-direction: column
+			margin-top: $gutter/3
+	.product-slider_2
+		margin-top: $gutter
+		margin-bottom: 0
+	.wrap_reviews
+		margin-top: 0
+	.text-slider_button
+		display: none
+	.wrap_mobile_slider_button
+		width: 100%
+		display: inline-flex
+		justify-content: start
+		margin-top: $gutter*1.5
+	.mobile_slider_button
+		position: relative
+		display: inline-block
+		margin-right: auto
+		margin-left: auto
+		padding: 7px 38px
+		font-size: 18px
+
+	.owl-theme .owl-nav.disabled+.owl-dots
+		margin-top: -20px	
+		span
+			width: 5px
+			height: 5px
+	.tefon
+		margin-left: 5px
+		a
+			font-size: 16px
+	.menu
+		a
+			i
+			width: 16px
+			height: 16px	
+	.city
+	.title_motivation
+		h2
+			font-size: 20px
+	h2
+		font-size: 24px
+		text-align: center
+	.wrap_motivation
+		margin-top: $gutter
+	.line
+		display: none
+	.block_motivation_mobile
+		margin-top: 0
+		.block-motivation_item
+			margin-top: $gutter/2
+			img
+				width: 10%
+				height: 10%
+				margin: 5px
+			p
+				padding: 4px
+				margin-bottom: 0
+	.wrap_order
+		margin-top: 0
+		.wrap_block-order_mobile
+			.block-order_mobile
+				img
+					padding-top: 5px
+					width: 45px
+					height: 40px
+	
+	.block-order
+			margin-top: $gutter !important
+	.wrap_block-order_mobile
+		.motivation_button
+			padding: 5px 28px
+	
+	.wrap_order 
+		.block-order_mobile
+			.block-order_item_1, .block-order_item_2, .block-order_item_3
+				display: inline-flex
+				justify-content: start
+				align-items: start
+				text-align: left
+	.tabs
+		margin-bottom: $gutter/4		
+/*==========  Mobile First  ==========*/
+
+// ≤576px
++media-breakpoint-up(sm)
+
+// ≤768px
++media-breakpoint-up(md)
+
+// ≤992px
++media-breakpoint-up(lg)
+
+// ≤1200px
++media-breakpoint-up(xl)

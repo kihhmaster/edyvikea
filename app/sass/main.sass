@@ -1,0 +1,790 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.65
+	font-family: $default-font
+	overflow-x: hidden
+	color: $text
+	input, textarea
+		border: #666 1px solid
+		outline: none
+		&:focus:required:invalid
+			border-color: red
+		&:required:valid
+			border-color: green
+
+.button
+	display: inline-block
+	border: none
+	color: $text
+	text-decoration: none
+	background-color: $accent2
+	padding: 8px 55px
+	font-size: 18px
+	
+	font-weight: 600
+	// letter-spacing: 3px
+	border-radius: 20px
+	text-align: center
+	position: relative
+	outline: none
+	transition: background-color .1s ease
+	cursor: pointer
+	&::after
+		transition: background-color .2s ease
+		position: absolute
+		content: ''
+		height: 4px
+		bottom: 0
+		width: 100%
+		// background-color: darken($accent, 50%)
+		opacity: .18
+		border-bottom-left-radius: 2px
+		border-bottom-right-radius: 2px
+		left: 0
+	&:focus, &:hover
+		outline: none
+		text-decoration: none
+		color: #fff
+	&:hover
+		background-color: lighten($accent, 5%)
+		&::after
+			opacity: .22
+	&:active
+		background-color: darken($accent, 5%)
+		&::after
+			opacity: .32
+
+
+.container-fluid
+	max-width: 1200px
+	display: block
+.top-menu_wrap
+	margin-top: $gutter
+	margin-bottom: $gutter
+	display: flex
+	flex-direction: row
+	justify-content: space-between
+	align-items: center
+	
+.motivation
+	background-image: url(../img/_src/motivation_fon_4.png)
+	background-position:  right
+	background-repeat: no-repeat
+	height: 1200px
+	width: 100% 
+
+.logo
+	img
+		width: 100%
+		
+.city
+	display: flex
+	flex-direction: row
+	justify-content: flex-start
+	align-items: center
+	p
+		margin-bottom: 0
+	select
+		font-family: $default-font
+		font-weight: 700
+		font-size: 18px
+		border: none
+		margin-left: $gutter/2
+.city
+	select
+		&:focus
+			outline: none
+.owl-theme .owl-nav.disabled+.owl-dots
+	position: relative
+	z-index: 100
+	margin-top: -40px
+
+.owl-theme .owl-dots .owl-dot 
+	span	
+		background: #fff
+.owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span
+	background: $accent2
+
+.owl-stage-outer
+	z-index: 1	
+.tefon
+	a:hover
+		color: $accent2
+		text-decoration: underline
+		font-size: 1.01em		
+.menu
+	list-style-type: none
+	padding: 0
+	margin: 0
+	display: flex
+	flex-direction: column
+	justify-content: flex-start
+	align-items: flex-start
+	a
+		color: $text
+		font-weight: 600
+
+.menu 
+	li
+		a
+			text-decoration: none
+			i.fa 
+				display: inline-flex
+				align-items: center
+				justify-content: center
+				height: 24px
+				width: 24px
+				text-align: center
+				line-height: 30px
+				margin: 3px
+				padding: 10px
+				border-radius: 40px
+				color: #fff
+				position: relative
+				transition: all ease 0.2s
+.menu
+			i.fa::after 
+				content: ""
+				position: absolute
+				top: 0
+				bottom: 0
+				left: 0
+				right: 0
+				padding: 5px
+				margin: auto
+				height: 100%
+				width: 100%
+				z-index: -1
+				border-radius: 50%
+				// background-color: #3b5998
+.menu 
+	li 
+		a 
+			i.fa:hover 
+				color: #fff
+				font-size: 18px
+.menu 
+	li 
+		a 
+			i.fa:hover::after 
+				animation: animate ease 0.6s forwards
+
+.menu 
+	li 
+		a 
+			i.fa-whatsapp 
+				background-color: #75b73b
+.menu 
+	li 
+		a 
+			i.fa-facebook
+				background-color: #3b5998
+.menu 
+	li 
+		a 
+			i.fa-paper-plane
+				
+				background-color: #00aced
+.menu 
+	li 
+		a 
+			i.fa-instagram 
+				background-color: #983bb2
+.menu 
+	li 
+		a 
+			i#viber
+				background-color: #675da9
+.menu 
+	li 
+		a 
+			i.fa-youtube-play 
+				background-color: #ff0000
+.menu 
+	li 
+		a 
+			i.fa-vk 
+				background-color: #5c89af
+
+.owl-item
+	display: block
+.item_slider
+	position: relative
+	display: block
+	width: 100%
+.wrap-product-slider_2
+	display: block
+	width: 100%
+	.slider_2 
+		.owl-stage-outer	
+			.item_slider
+				position: relative
+				display: flex
+				justify-content: center
+				align-items: center
+				img
+					width: 100%
+					max-width: 800px
+			
+
+.wrap_top-slider_mobile
+	display: none
+.owl-carousel	
+	z-index: 1
+.footer
+	.wrap_info-fotter
+		.menu
+			justify-content: center
+			align-items: center
+.text-Slider_wrap
+	z-index: 10
+	position: absolute
+	top: 120px	
+	h1
+		font-family: $default-font
+		font-size: 54px
+		font-weight: 800
+		color: $accent
+		line-height: 1
+		margin-bottom: $gutter/2
+	.description_top-slider
+		display: flex
+		font-family: $default-font
+		font-size: 18px
+		font-weight: 600
+		color: $accent
+		line-height: 1.9
+		margin: 0
+		p
+			margin: 0
+			span
+				margin-left: $gutter/2
+				color: $text
+.item_slider
+	.loaded 
+		img
+			opacity: 1
+
+.top-slider
+	.top-slider_tablet,	.top-slider_mobile
+		display: none
+.top-slider
+	.top-slider_desktop	
+		display: none
+// .top-slider
+// 	.top-slider_desktop-xl
+// 		display: none
+
+.soc
+	display: inline-flex
+	justify-content: space-between
+.mobile_slider_button
+	display: none
+.text-slider_button
+	margin-top: $gutter/2
+	padding: 5px 48px
+
+.text_item-price_1
+	span
+		strong
+			color: $text
+
+//section motivation
+
+.motivation
+	margin-top: $gutter*2
+.wrap_motivation
+	position: relative
+	display: flex
+	flex-direction: column
+
+
+
+h2
+	font-size: 48px
+	font-weight: 800
+	color: $accent
+	line-height: 1.1
+.wrap_order
+	.block-order_mobile
+		display: none
+.wrap_block-order_mobile
+	display: none
+.wrap_motivation
+	.block_motivation_mobile
+		display: none
+.line
+	display: block
+	position: absolute
+	top: 60px
+	right: -700px
+	width: 100%
+	border-bottom: 4px solid $accent2
+.block_motivation
+	margin-top: $gutter*2
+	display: inline-flex
+	p
+		font-weight: 500
+		span
+			font-size: 24px
+			font-weight: 700
+			line-height: 1.2
+
+.block-motivation_item
+	margin-right: $gutter
+	width: 100%
+	max-width: 300px
+	img
+		margin-bottom: $gutter
+		margin-top: $gutter
+
+
+.wrap_order
+	position: relative
+	display: flex
+	flex-direction: column
+	margin-top: $gutter*4
+	p
+		font-weight: 500
+		font-size: 22px
+.block_order
+	
+	margin-top: $gutter*2
+	display: inline-flex
+	p
+		font-size: 16px
+		span
+			color: $accent
+			font-weight: 800
+	img
+		margin-bottom: $gutter
+	div
+		margin-right: $gutter*3
+.motivation_button
+	margin-top: $gutter
+
+.block-order_item_1, .block-order_item_2, .block-order_item_3
+	margin-right: $gutter
+
+.block-order_item_1
+	.motivation_button
+		margin-top: 55px
+
+.row_price_1
+	.item
+		p
+			margin-bottom: 0
+			font-weight: 800
+
+.row_price_1
+	.item-price_1
+			background: #fff
+.item-price_1
+	width: 270px
+	display: flex
+	flex-direction: column
+	align-items: center
+	justify-content: center
+	line-height: 1.4
+	margin: $gutter/2
+.price
+	margin-top: $gutter*2
+.wrap_price
+	margin-top: $gutter*2
+.item	
+	width: 100%
+	max-width: 250px
+	background: #ebebeb
+	margin: $gutter/2
+	padding: $gutter/2
+	font-size: 20px
+	color: $accent
+	font-weight: 700
+	border-radius: 15px
+	display: flex
+	flex-direction: column
+	align-items: center
+	justify-content: center
+	line-height: 1.4
+.row_price_2, .row_price_3, .row_price_4
+	.item
+		color: $text
+		p
+			font-size: 16px
+			font-weight: 500
+			text-align: center
+			margin-bottom: 0
+			span
+				font-size: 22px
+				font-weight: 800
+
+
+.row_price_2
+	.item_price_2
+		p
+			span
+				margin-bottom: 20px
+.row_price_3
+	.item-price_4
+		color: #c91111
+		p
+			span
+				font-weight: 800
+				font-size: 22px
+.row_price_4
+	.item-price_1
+		p
+			span
+				line-height: 1.1
+		.text_item-price_1
+			font-size: 12px
+			text-align: left
+			span
+				font-size: 12px
+				text-align: left
+				color: #c91111
+.wrap_price
+	
+	.item
+		.gutter
+			margin-bottom: $gutter/2
+.row	
+	display: flex
+	flex-flow: row nowrap
+.wrap_mobile_price
+	display: none
+.min-cost_delivery
+	font-size: 14px
+	font-weight: 600
+.price 
+	h2
+		margin-top: $gutter
+.wrap_reviews
+	margin-top: $gutter*2
+.line_2
+	position: relative
+	right: -580px
+	top: -25px
+	width: 1400px
+	display: block
+	border-bottom: 4px solid $accent2
+.title-reviews_item_1
+	padding-right: 0
+	margin-top: $gutter
+.title-reviews_item_2
+	padding: 0
+	margin-top: $gutter*2
+
+#showcase 
+	margin-top: $gutter*2
+	margin-bottom: $gutter*4
+	overflow: visible !important
+	visibility: hidden
+	height: 400px
+#showcase 
+	.card 
+		img 
+			width: 200px
+			box-shadow: 0 2px 5px rgba(0,0,0,0.2), 0 4px 6px rgba(0,0,0,0.2)
+			margin: 10px o
+
+.wrap_reviews 
+	width: 100%   
+	.item_galery
+		
+		img
+.wrap_galerey
+	width: 100%
+
+.product-slider_2
+	display: flex
+	justify-content: center
+	align-items: center
+	width: 100%
+	max-width: 1400px
+	margin: $gutter auto
+	.wrap-product-slider_2
+		.owl-item
+			width: 100%
+			display: flex
+			justify-content: center
+			align-items: center
+			padding: 0px 0		
+
+.snav 
+	width: 64px
+	height: 64px
+	color: $accent
+	font-family: $default-font
+	font-weight: 800
+	text-align: center
+	cursor: pointer
+	transition: color 0.7s
+	i
+		font-size: 34px
+
+.wr-snav 
+	display: flex
+	justify-content: space-between
+	align-items: center
+	margin-bottom: 200px
+
+.snav:hover 
+	color: rgba($accent, 0.4)
+        
+.snav-left 
+	border-radius: 12px 5px 5px 12px
+
+.snav-right 
+	border-radius: 5px 12px 12px 5px
+
+
+.footer
+	background: #f2f2f2
+	img
+		width: 30%
+.list
+	ul
+		padding: 0
+		li
+			list-style-type: none
+.wrap_info-fotter
+	display: flex
+	flex-direction: column
+	justify-content: center
+	align-items: center
+	width: 100%
+	max-width: 600px
+	text-align: center
+	p 
+		color: $text
+		font-size: 24px
+		font-weight: 600
+.list-cities
+	p 
+		font-size: 16px
+		font-weight: 500
+		color: $text
+.wrap_footer-content
+	display: flex
+	justify-content: center
+	align-items: center
+	width: 100%
+	margin-bottom: $gutter
+	margin-top: $gutter
+.wrap_footer
+	display: inline-flex
+	width: 100%
+.wrap_footer
+	.col-lg-12
+		padding: 0
+
+
+//////////////////////////////////////
+* 
+  margin: 0
+  padding: 0
+
+.tabs 
+  max-width: 700px
+  margin: 0 0 30px
+.tabs__caption
+	display: inline-flex
+	flex-wrap: nowrap
+	justify-content: space-between
+	width: 100%
+
+.tabs__caption:after 
+  content: ''
+  display: table
+  clear: both
+
+.tabs__caption
+	margin: 0
+	li 
+		list-style-type: none
+		width: 100%
+		padding: 5px 6px
+		margin: 0 2px
+		background: #f8f8f8
+		color: $accent
+		position: relative
+		border-width: 2px 2px 2px 2px
+		border-radius: 10px 10px 
+		text-align: center
+	
+.tabs__caption 
+	li 	
+		p
+			margin-bottom: 0
+			font-size: 14px
+			font-family: $default-font
+			font-weight: 700
+
+.tabs__caption li:not(.active) 
+  cursor: pointer
+
+.tabs__caption li:not(.active):hover 
+  background: #ebebeb
+  // border-color: $accent
+
+.tabs__caption 
+	.active 
+		background: #ebebeb
+		color: $accent
+		border: 2px solid $accent2
+
+.tabs__caption 
+	.active:after 
+		content: ''
+		position: absolute
+		bottom: -5px
+		left: 0
+		right: 0
+		height: 5px
+	
+
+.tabs__content 
+  display: none
+  background: #FFF
+  border-radius: 10px 10px
+  padding: 0px
+.tabs__content
+	ul
+		li 
+			list-style-type: none
+			
+
+.tabs__content.active 
+  display: block
+
+
+.item-price_mobile
+	display: flex
+	flex-flow: row nowrap
+	justify-content: space-between
+	align-items: center
+	margin: 10px 2px
+	width: 100%
+	background: #ebebeb
+	border-radius: 10px
+	padding: $gutter/3
+	font-size: 18px
+	color: #002f9d
+	font-weight: 700
+	line-height: 1.4
+	p 
+		text-align: center
+		span
+
+			color: $text
+			
+.gutter 
+	margin-bottom: 5px
+	span
+		font-size: 18px
+		color: $text
+.item-price_mobile
+	div
+		p
+			font-size: 16px
+			text-align: left
+			margin-bottom: 0	
+.text-information
+	p 
+		text-align: center
+		margin-bottom: 0
+		color: $text
+		font-size: 18px
+	.text-thin
+		font-size: 12px
+		font-weight: 500
+	.red-text
+		span	
+			color: #c62128
+
+.mfp-content
+	display: flex
+	flex-direction: row
+	justify-content: center
+	align-items: center
+.mfp-container
+	display: flex
+	flex-direction: row
+	justify-content: center
+	align-items: center
+.popup_input
+	width: 100%
+	// max-width: 500px
+	height: 300px
+	background: #FFF
+	display: flex
+	flex-direction: column
+	justify-content: center
+	align-items: center
+	p
+		font-size: 18px
+		font-weight: 600
+.mfp-content
+	max-width: 500px
+.popup_input
+	text-align: center
+	.menu
+		justify-content: center
+		align-items: center
+.popup_input
+	.mfp-close
+		
+@media screen and (max-width: 650px) 
+  .tabs__caption li 
+		flex-flow: row nowrap
+
+select
+	color: #000
+	background-color: transparent
+option 
+	
+	
+select::selection
+
+//hamburger
+.contacts_desktop
+	display: block
+.contacts_mobile
+	display: none
+#menu23:checked+label 
+  div:first-child 
+    top: -10px
+    left: -7px
+    width: 50px
+    height: 50px
+    border-radius: 50%
+  
+  div:nth-child(2) 
+    top: 12px
+    transform: rotate(-315deg)
+    width: 35px
+    background: $text
+  
+  div:nth-child(3) 
+    top: 12px
+    transform: rotate(495deg)
+    width: 35px
+    background: $text
+  
+
+
+@import "media" // Always at the end
